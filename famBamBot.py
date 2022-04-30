@@ -1,4 +1,10 @@
 import hikari
 
-bot = hikari.GatewayBot(token='OTY5OTk4Mzc2NDAzODY5Njk2.Ym1jYg.ZCC0gQ2N9LnpQjoLVWJyQenUUy4')
+token = open('famBamBotToken.txt', 'r')
+
+tokenStr = token.read()
+
+token.close()
+
+bot = hikari.GatewayBot(token=tokenStr)
 bot.run()
